@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>404 - Page Not Found | Priyoyaar</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Outfit',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:
+  linear-gradient(rgba(15,23,42,0.92),rgba(15,23,42,0.96)),
+  url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+  overflow:hidden;
+  color:white;
+  padding:20px;
+}
+
+.error-box{
+
+  width:100%;
+  max-width:700px;
+
+  background:rgba(30,41,59,0.85);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(12px);
+
+  border-radius:35px;
+
+  padding:70px 40px;
+
+  text-align:center;
+
+  box-shadow:0 20px 50px rgba(0,0,0,0.45);
+}
+
+.error-code{
+  font-size:140px;
+  font-weight:800;
+  line-height:1;
+  color:#f97316;
+
+  text-shadow:0 10px 30px rgba(249,115,22,0.35);
+}
+
+.error-title{
+  font-size:42px;
+  margin-top:15px;
+  margin-bottom:20px;
+}
+
+.error-text{
+  color:#cbd5e1;
+  font-size:18px;
+  line-height:1.8;
+  max-width:550px;
+  margin:auto;
+}
+
+.btns{
+  margin-top:40px;
+
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  text-decoration:none;
+  padding:16px 34px;
+  border-radius:60px;
+  font-weight:600;
+  transition:0.4s;
+}
+
+.home-btn{
+  background:#f97316;
+  color:white;
+
+  box-shadow:0 10px 30px rgba(249,115,22,0.35);
+}
+
+.home-btn:hover{
+  background:#ea580c;
+  transform:translateY(-4px);
+}
+
+.whatsapp-btn{
+  border:2px solid rgba(255,255,255,0.12);
+  color:white;
+}
+
+.whatsapp-btn:hover{
+  background:white;
+  color:#111827;
+}
+
+.small-text{
+  margin-top:35px;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+@media(max-width:768px){
+
+  .error-code{
+    font-size:95px;
+  }
+
+  .error-title{
+    font-size:30px;
+  }
+
+  .error-text{
+    font-size:16px;
+  }
+
+  .error-box{
+    padding:50px 25px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="error-box">
+
+  <div class="error-code">404</div>
+
+  <h1 class="error-title">
+    Oops! Page Not Found
+  </h1>
+
+  <p class="error-text">
+    Je page ta khujchen seta hoyto remove kora hoyeche,
+    rename hoyeche ba temporary unavailable ache.
+    Priyoyaar e abar fire ashun 😊
+  </p>
+
+  <div class="btns">
+
+    <a href="index.html" class="btn home-btn">
+      🏠 Back To Home
+    </a>
+
+    <a
+    href="https://wa.me/918436135523?text=Hello%20Priyoyaar%20Shop"
+    target="_blank"
+    class="btn whatsapp-btn">
+      📲 Contact Us
+    </a>
+
+  </div>
+
+  <div class="small-text">
+    © 2026 Priyoyaar Shop
+  </div>
+
+</div>
+
+</body>
+</html>

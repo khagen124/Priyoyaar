@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Priyoyaar – Cool Drinks, Tea & Pan</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Outfit',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0f172a;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+
+nav{
+  width:100%;
+  padding:22px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  position:fixed;
+  top:0;
+  z-index:1000;
+
+  background:rgba(15,23,42,0.80);
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+.logo{
+  font-size:32px;
+  font-weight:800;
+  color:#f97316;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:35px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-size:16px;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#f97316;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:120px 8% 60px;
+
+  background:
+  linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.90)),
+  url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:60px;
+  align-items:center;
+}
+
+.hero-text h1{
+  font-size:75px;
+  line-height:1.1;
+  margin-bottom:25px;
+  font-weight:800;
+}
+
+.hero-text h1 span{
+  color:#f97316;
+}
+
+.hero-text p{
+  color:#d1d5db;
+  line-height:2;
+  font-size:18px;
+  margin-bottom:35px;
+}
+
+.hero-btns{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:16px 34px;
+  border-radius:60px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.4s;
+}
+
+.btn1{
+  background:#f97316;
+  color:white;
+  box-shadow:0 10px 30px rgba(249,115,22,0.35);
+}
+
+.btn1:hover{
+  transform:translateY(-5px);
+  background:#ea580c;
+}
+
+.btn2{
+  border:2px solid rgba(255,255,255,0.15);
+  color:white;
+}
+
+.btn2:hover{
+  background:white;
+  color:#111827;
+}
+
+.hero-image img{
+  width:100%;
+  height:550px;
+  object-fit:cover;
+  border-radius:35px;
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+  padding:110px 8%;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.title h2{
+  font-size:55px;
+  margin-bottom:15px;
+}
+
+.title p{
+  color:#cbd5e1;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#1e293b;
+  padding:40px 30px;
+  border-radius:30px;
+
+  transition:0.4s;
+
+  border:1px solid rgba(255,255,255,0.06);
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  background:#334155;
+}
+
+.icon{
+  width:80px;
+  height:80px;
+
+  border-radius:20px;
+
+  background:#f97316;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:38px;
+
+  margin-bottom:25px;
+}
+
+.card h3{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.card p{
+  color:#cbd5e1;
+  line-height:1.8;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+  padding:110px 8%;
+}
+
+.about-box{
+  background:#1e293b;
+  border-radius:40px;
+
+  padding:50px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:40px;
+  align-items:center;
+}
+
+.about-image img{
+  width:100%;
+  height:420px;
+
+  object-fit:cover;
+
+  border-radius:30px;
+}
+
+.about-text h2{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.about-text p{
+  font-size:17px;
+  line-height:1.9;
+  color:#cbd5e1;
+  margin-bottom:15px;
+}
+
+/* ================= BOOKING ================= */
+
+.booking{
+  padding:120px 8%;
+  text-align:center;
+}
+
+.booking-box{
+  background:
+  linear-gradient(135deg,#f97316,#ea580c);
+
+  padding:80px 40px;
+
+  border-radius:40px;
+}
+
+.booking-box h2{
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.booking-box p{
+  font-size:18px;
+  margin-bottom:35px;
+}
+
+.booking-btn{
+  display:inline-block;
+
+  padding:18px 42px;
+
+  border-radius:60px;
+
+  background:white;
+  color:#ea580c;
+
+  text-decoration:none;
+
+  font-size:20px;
+  font-weight:700;
+
+  transition:0.4s;
+}
+
+.booking-btn:hover{
+  transform:scale(1.05);
+
+  background:#111827;
+  color:white;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  text-align:center;
+  padding:35px;
+
+  color:#94a3b8;
+
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  nav{
+    flex-direction:column;
+    gap:18px;
+  }
+
+  nav ul{
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    text-align:center;
+  }
+
+  .hero-btns{
+    justify-content:center;
+  }
+
+  .hero-text h1{
+    font-size:48px;
+  }
+
+  .title h2,
+  .about-text h2,
+  .booking-box h2{
+    font-size:36px;
+  }
+
+  .about-box{
+    grid-template-columns:1fr;
+    padding:30px;
+  }
+
+  .about-image img{
+    height:300px;
+  }
+
+  .hero-image img{
+    height:380px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+  <div class="logo">Priyoyaar</div>
+
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#booking">Booking</a></li>
+  </ul>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+  <div class="hero-container">
+
+    <div class="hero-text">
+
+      <h1>
+        Fresh Drinks,<br>
+        Hot Tea & <span>Best Service</span>
+      </h1>
+
+      <p>
+        Priyoyaar Shop e paben thanda jol, cool drinks,
+        gorom cha o fresh pan — shobkichu ek jaygay.
+        Bhalo byabohar, porishkar poribesh
+        o trusted service amader bisheshotto.
+      </p>
+
+      <div class="hero-btns">
+
+        <a
+        href="https://wa.me/918436135523?text=Hello%20Priyoyaar%20Shop"
+        target="_blank"
+        class="btn btn1">
+        📲 WhatsApp Booking
+        </a>
+
+        <a href="#services" class="btn btn2">
+          Explore
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="services">
+
+  <div class="title">
+
+    <h2>Our Services</h2>
+
+    <p>
+      Fresh products and quality service everyday.
+    </p>
+
+  </div>
+
+  <div class="service-grid">
+
+    <div class="card">
+
+      <div class="icon">💧</div>
+
+      <h3>Fresh Water</h3>
+
+      <p>
+        Clean and chilled drinking water available anytime.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">🥤</div>
+
+      <h3>Cool Drinks</h3>
+
+      <p>
+        Different branded cold drinks and refreshments.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">☕</div>
+
+      <h3>Hot Tea</h3>
+
+      <p>
+        Fresh and tasty tea prepared with care.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <div class="icon">🍃</div>
+
+      <h3>Fresh Pan</h3>
+
+      <p>
+        Delicious and fresh pan instantly prepared.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+  <div class="about-box">
+
+    <div class="about-image">
+
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+    <div class="about-text">
+
+      <h2>About Priyoyaar</h2>
+
+      <p>
+        Priyoyaar Shop holo apnader bishasher dokan.
+        Ekhane customer satisfaction, quality products
+        o friendly service ke sobcheye beshi
+        gurutto deya hoi.
+      </p>
+
+      <p>
+        Ekbar asun, abar aste mon chaibe 😊
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= BOOKING ================= -->
+
+<section class="booking" id="booking">
+
+  <div class="booking-box">
+
+    <h2>WhatsApp Booking</h2>
+
+    <p>
+      Fast booking and instant customer support.
+    </p>
+
+    <a
+    href="https://wa.me/918436135523?text=Hello%20Priyoaar%20Shop"
+    target="_blank"
+    class="booking-btn">
+    📞 Start Booking
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+  © 2026 Priyoyaar Shop | Designed With ❤️
+</footer>
+
+</body>
+</html>
